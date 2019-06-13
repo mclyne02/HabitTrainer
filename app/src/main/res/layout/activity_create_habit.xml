@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        tools:context=".CreateHabitActivity"
+        android:orientation="vertical">
+
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/et_title"
+              android:inputType="textMultiLine"
+              android:hint="@string/enter_title"/>
+
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/et_description"
+              android:inputType="textMultiLine"
+              android:lines="2"
+              android:hint="@string/enter_description"/>
+
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:id="@+id/btn_choose_image"
+        android:contentDescription="@string/choose_image_btn"
+        android:onClick="chooseImage"/>
+
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:id="@+id/iv_image"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:contentDescription="@string/selected_image"/>
+
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:id="@+id/btn_save"
+        android:onClick="storeHabit"
+        android:text="@string/save_habit_btn"
+        android:contentDescription="@string/save_habit_btn"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:id="@+id/tv_error"
+        android:visibility="invisible"
+        android:textColor="#e53935"/>
+
+
+</LinearLayout>
